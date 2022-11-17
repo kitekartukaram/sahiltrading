@@ -1,12 +1,464 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Sahil Trading</h1>
-</body>
-</html>
+<!Doctype HTML>
+<HTML  lang="en">
+<Head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+     <title>Sahil Trading</title>
+     <style>
+           *{margin:0; padding:0; list-style:none; text-decoration:none; font-family: sans-serif; box-sizing: border-box;}
+                                      /*Navigation Bar*/
+           nav{height:60px; background:	#FAF9F6;}
+           nav img{width:160px; position:absolute; top:6px; left:2%;}
+           nav ul{float:right; margin-right:25px;}
+           nav ul li{display:inline-block; line-height: 55px; margin:0 15px;}
+           nav ul li a{position:relative; color:black; font-size:20px; padding:5px 0; font-weight:bold;}
+           ul li a.active,
+           ul li a:hover{text-decoration:underline; }
+           label #btn,
+           label #cancel{color:black; font-size:26px; float:left; line-height:80px; margin-left:20px; cursor:pointer; margin-top:-10px; display:none;}
+           label #search{line-height:80px; font-size: 26px; margin-right:20px; margin-top:-10px; float:right;}
+           #check{display:none;}
+           #search{float:right; margin-left:130px; color:black;}
+           @media (max-width:1118px){
+                                     nav img{left:8%;}
+           }
+           @media (max-width:944px){
+                                   nav img{left:28%; top:5px; width:160px;}
+                                   nav ul li a{font-size:17px;}
+           }
+           @media (max-width:860px){
+                                   label #btn{display:block;}
+                                   ul{position:fixed; width:100%; height:100vh; background:white; top:60px; left:-100%; transition: all .5s; text-align:center;}
+                                   nav ul li{display:block; margin:20px 0; line-height:30px;}
+                                   nav ul li a{font-size:20px;}
+                                   #check:checked ~ ul{left:0%;}
+                                   #check:checked ~ label #btn{display:none;}
+                                   #check:checked ~ label #cancel{display:block;}
+           }
+                                    /*Sticky Button*/
+           .stickybtn-container .btn-float .btn{text-decoration: none; font-size: 2rem; font-weight: bold; letter-spacing: 2px; background-color: #29434e; padding: 5px 10px; border-radius: 20px; color: #fff; position: fixed; right: 15px; bottom: 40px; transition: all 0.3s ease 0s; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); z-index: 99;}
+                                    /*First Div*/
+           .firstdiv{ background-image: linear-gradient(rgba(9,5, 54,0.3), rgba(5,4,46,0.7)), url("assets/stockimg.gif "); width:100%; height:108vh; background-size:cover; color:white;}
+           .course-container{width:80%; display:block; margin:auto; padding-top:100px;}
+           .content-section{float:left; width:55%; margin-top:30px;}
+           .image-section{float:right; width:40%;}
+           .image-section img{width:100%; height:auto;}
+           .content-section .title{text-transform:uppercase; font-size:28px;}
+           .content-section .content h3{margin-top:20px; color:#5d5d5d; font-size:21px;}
+           .content-section .content p{margin-top:10px; font-family:sans-serif; font-size:18px; line-height:1.5;}
+           .content-section .content .button{margin-top:30px;}
+           .content-section .content .button a{background-color:#3d3d3d; padding:12px 40px; text-decoration:none; color:#fff; font-size:25px; letter-spacing:1.5px;}
+           .content-section .content .button a:hover{background-color:#a52a2a; color:#fff;}
+           .content-section .social{margin:40px 40px;}
+           .content-section .social i{color:#a52a2a;font-size:30px; padding:0px 10px;}
+           .content-section .social i:hover{color:#3d3d3d;}
+           @media screen and (max-width: 768px){
+	                                             .course-container{width:80%; display:block; margin:auto; padding-top:50px;}
+                                               .content-section{float:none; width:100%; display:block; margin:auto;}
+                                               .image-section{float:none; width:100%;}
+                                               .image-section img{width:100%; height:auto; display:block; margin:auto;}
+                                               .content-section .title{text-align:center; font-size:19px;}
+                                               .content-section .content .button{text-align:center;}
+                                               .content-section .content .button a{padding:9px 30px;}
+                                               .content-section .social{text-align:center;}
+           }
+
+
+          
+
+.firstdiv1{background-image: linear-gradient(rgba(9,5, 54,0.3), rgba(5,4,46,0.7)), url("assets/stockimg.gif "); width:100%; height:90vh; background-size:cover;}                       
+
+.firstdiv2{width:90%; color:#fff; position:absolute; top:50%; left:50%; transform: translate(-50%,-50%); text-align:center;}
+.firstdiv2 h1{font-size:62px;}
+.firstdiv2 p{margin:10px 0 40px; font-size:17px; color:#fff; }
+.hero-btn{display:inline-block; text-decoration: none; color:#fff; border:1px solid #fff; padding:12px 34px; font-size:16px; background:transparent; position:relative; cursor: pointer;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services{
+
+text-align: center;
+font-family: 'Roboto', sans-serif;
+background: #1c2135;
+}
+.services h1{
+display: inline-block;
+text-transform: uppercase;
+border-bottom: 4px solid #3498db;
+font-size: 20px;
+padding-bottom: 10px;
+margin-top: 60px;
+color:white;
+}
+.cen{
+max-width: 1200px;
+margin: auto;
+overflow: hidden;
+padding: 20px;
+}
+.service{
+display: inline-block;
+width: calc(100% / 3);
+margin: 0 -2px;
+padding: 20px;
+box-sizing: border-box;
+cursor: pointer;
+transition: 0.4s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.service i{
+color: white;
+font-size: 34px;
+margin-bottom: 30px;
+}
+.service h2{
+font-size: 18px;
+text-transform: uppercase;
+font-weight: 500;
+color:white;
+margin: 0;
+}
+.service p{
+
+font-size: 15px;
+font-weight: bold;
+color:white;
+
+}
+@media screen and (max-width: 800px) {
+.service{
+  width: 50%;
+
+}
+}
+@media screen and (max-width: 500px) {
+.service{
+  width: 100%;
+
+}
+}
+
+
+
+.wrapper {
+  margin:auto;
+  max-width: 900px;
+}
+.video-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   }
+
+
+@media screen and (max-width: 900px) {
+.wrapper{margin:10px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tcontainer {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+margin:0 20px;
+}
+
+.tcontainer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.tcontainer img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.tcontainer span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .tcontainer {
+      text-align: center;
+      margin:0 20px;
+  }
+  .tcontainer img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+
+
+
+
+     </style>
+</Head>
+
+
+
+
+<Body>
+<Header>
+       <nav>
+           <input type="checkbox" id="check">
+           <label for="check">
+           <i class="fas fa-bars" id="btn"></i>
+           <i class="fas fa-times" id="cancel"></i>
+           <i class="fas fa-search" id="search" style="color:black"></i>
+           
+           </label>
+           <img src="assets/logo 2.png" alt="logo">
+           <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="enroll.html">Enroll</a></li>
+
+           <li><a href="contact.html">Contact</a></li>
+           </ul>
+       </nav> 
+</Header> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="firstdiv1">
+    <div class="firstdiv2">
+                   <h1>Invest Like A Pro.</h1>
+                   <p>Pure Price Action-Based Trading, Detailed Technical Analysis, Risk Management Techniques,
+                      Develop Trading Psychology & Discipline, Proper use of charting tools & Indicators.
+                
+                   </p>
+                   <a href="#" class="hero-btn">Enroll Now</a>
+    </div>
+</div>
+
+<div class="stickybtn-container">
+                                <div class="btn-float">
+                                <a href="enroll.html" class="btn">&#128176;Enroll</a>
+                                </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="services">
+    <h1>Our Speciality</h1>
+    <br><br>
+
+    <div class="wrapper">
+      <div class="video-container">
+        <iframe width="560" height="325" src="https://www.youtube.com/embed/gTzBkskO-f4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="cen">
+      <div class="service">
+        <h2><span class="material-symbols-outlined" style="font-size:40px">
+          trending_up
+          </span></h2>
+        <h2>Intraday</h2>
+        <p>Buying and selling have to occur within one trading session on the same day.</p>
+      </div>
+
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px; color:white;">
+          candlestick_chart
+          </span>
+        <h2>Future & Option</h2>
+        <p>Invest in Future and option with the help of our experience.</p>
+      </div>
+
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px; color:white;">
+          query_stats
+          </span>
+        <h2>Positional Trading</h2>
+        <p>Positional trading is an upscale version of intraday trading.</p>
+      </div>
+
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px; color:white;">
+          analytics
+          </span>
+        <h2>Technical Analysis</h2>
+        <p>We are expert in the Technical Analysis.We Want to make you Too.</p>
+      </div>
+
+      <div class="service">
+        <span class="material-symbols-outlined"  style="font-size:40px; color:white;">
+          monitoring
+          </span>
+        <h2>Trading Plan & Setup</h2>
+        <p>We will help you to make Trading Plan and Setup To make you sucessed.</p>
+      </div>
+
+      <div class="service">
+        <span class="material-symbols-outlined" style="font-size:40px; color:white;">
+          campaign
+          </span>
+        <h2>IPO Investing</h2>
+        <p>Investing in the new companies to  make your money extra.</p>
+      </div>
+    </div>
+  </div>
+<br><br>
+
+
+
+
+
+
+<div class="course-info">
+    <center><h1 style="display: inline-block;
+      text-transform: uppercase;
+      border-bottom: 4px solid #3498db;
+      font-size: 20px;
+      padding-bottom: 10px;
+      margin-top: 60px;   font-family:montserrat,sans-serif">Our Happy Traders</h1></center>
+  
+  </div>
+  
+  <br><br><br>
+   <center><h1>200+ Happy Traders</h1></center>
+   <br>
+  <div class="tcontainer">
+     
+     <img src="assets/profile.png" alt="Avatar" style="width:70px">
+    <p><span>Adnaan Shaikh</span>(Student)</p>
+    <p>Official Big Bull helped me to make money from the Share Market and Mutual Funds.This course is tottaly value for money.</p>
+  </div>
+  <br><br>
+  <div class="tcontainer">
+    <img src="assets/profile.png" alt="Avatar" style="width:70px">
+    <p><span>Vishal Patil</span>(Stock Trader)</p>
+    <p>I have 5 year of trading experience,But i always wanated to learn deep knowledge of share market. This course helped me a lot to achieving of goals.</p>
+  </div>
+  <br><br>
+  <div class="tcontainer">
+    <img src="assets/profile.png" alt="Avatar" style="width:70px">
+    <p><span>Samir Patel</span>(Student)</p>
+    <p>I always wanted to earn money from the share market for spending money while studying.This course helped me to make huge money from the Share Market.</p>
+  </div>
+  
+  <br><br>
+  <div class="tcontainer">
+    <img src="assets/profile.png" alt="Avatar" style="width:70px">
+    <p><span>Ram Pawar</span>(Shop Owner)</p>
+    <p>I am the owner of the Grocery Shop, but i always wanted to earn money apart from the shop. So i purchased this course. Now i can make more money than shop.</p>
+  </div>
+  
+  <br><br>
+  
+
+
+
+<div class="course-info">
+  <center><h1 style="display: inline-block;
+    text-transform: uppercase;
+    border-bottom: 4px solid #3498db;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-top: 40px;   font-family:montserrat,sans-serif">Connect With Us</h1></center>
+
+</div>
+
+
+
+<br>
+<center><a href="https://wa.me/918766071143" target="_blank"><img src="assets/whatsapp.png" alt="whatsapp" style="width:190px"></a></center>
+
+<br>
+<center><a href="https://wa.me/918766071143" target="_blank"><img src="assets/instagram.png" alt="whatsapp" style="width:180px"></a></center>
+
+
+
+
+
+
+</Body>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
