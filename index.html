@@ -16,7 +16,8 @@
            nav ul{float:right; margin-right:5px;}
            nav ul li{display:inline-block; line-height: 45px; margin:0 15px;}
            nav ul li a{position:relative; color:black; font-size:20px; padding:5px 0; font-weight:bold; font-family: 'Rubik Distressed', cursive;}
-        
+           nav ul li a.active,
+           nav ul li a:hover{color:#fc354c;}
            label #btn,
            label #cancel{color:black; font-size:26px; float:left; line-height:80px; margin-left:20px; cursor:pointer; margin-top:-14px; display:none;}
            label #search{line-height:80px; font-size: 26px; margin-right:20px; margin-top:-14px; float:right;}
@@ -32,8 +33,8 @@
            @media (max-width:860px){
                                    label #btn{display:block;}
                                    ul{position:fixed; width:100%; height:100vh; background:white; top:60px; left:-100%; transition: all .5s; text-align:center;}
-                                   nav ul li{display:block; margin:20px 0; line-height:30px;}
-                                   nav ul li a{font-size:25px; font-family: 'Syne Mono', monospace;}
+                                   nav ul li{display:block; margin:20px 0;  line-height:40px;}
+                                   nav ul li a{font-size:25px; font-family: 'Syne Mono', monospace; margin-top: 70px;}
                                    #check:checked ~ ul{left:0%;}
                                    #check:checked ~ label #btn{display:none;}
                                    #check:checked ~ label #cancel{display:block;}
@@ -266,7 +267,7 @@ margin:0 20px;
            </label>
            <img src="assets/logo 2.png" alt="logo">
            <ul>
-           <li><a href="#">Home</a></li>
+           <li><a href="#" class="active">Home</a></li>
            <li><a href="enroll.html">Courses</a></li>
         
            <li><a href="enroll.html">About</a></li>
