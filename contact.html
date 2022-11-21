@@ -7,24 +7,24 @@
      <link rel="stylesheet" href="assets/fontawesome/css/all.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
      <link rel="preconnect" href="https://fonts.googleapis.com">
+    
      <title>Sahil Trading</title>
      <style>
            *{margin:0; padding:0; list-style:none; text-decoration:none; font-family: sans-serif; box-sizing: border-box;}
            body{background:aqua;}
-                                            /*Navigation Bar*/
-           nav{height:60px; background:white;}
-           body{}
-           nav img{width:160px; position:absolute; top:3px; left:2%;}
-           nav ul{float:right; margin-right:5px;}
-           nav ul li{display:inline-block; line-height: 45px; margin:0 15px;}
-           nav ul li a{position:relative; color:black; font-size:20px;  padding:5px 0; font-weight:bold; font-family: 'Rajdhani', sans-serif;}
-           nav ul li a.active,
-           nav ul li a:hover{color:#fc354c;}
+                                      /*Navigation Bar*/
+           nav{height:60px; background:	#FAF9F6;}
+           nav img{width:160px; position:absolute; top:6px; left:2%;}
+           nav ul{float:right; margin-right:25px;}
+           nav ul li{display:inline-block; line-height: 55px; margin:0 15px;}
+           nav ul li a{position:relative; color:black; font-size:20px; padding:5px 0; font-weight:bold;}
+           ul li a.active,
+           ul li a:hover{color:#fc354c; }
            label #btn,
-           label #cancel{color:black; font-size:26px; float:left; line-height:80px; margin-left:20px; cursor:pointer; margin-top:-14px; display:none;}
-           label #search{line-height:80px; font-size: 26px; margin-right:20px; margin-top:-14px; float:right;}
+           label #cancel{color:black; font-size:26px; float:left; line-height:80px; margin-left:20px; cursor:pointer; margin-top:-10px; display:none;}
+           label #search{line-height:80px; font-size: 26px; margin-right:20px; margin-top:-10px; float:right;}
            #check{display:none;}
-           #search{float:right; margin-left:140px; color:black;}
+           #search{float:right; margin-left:130px; color:black;}
            @media (max-width:1118px){
                                      nav img{left:8%;}
            }
@@ -35,43 +35,315 @@
            @media (max-width:860px){
                                    label #btn{display:block;}
                                    ul{position:fixed; width:100%; height:100vh; background:white; top:60px; left:-100%; transition: all .5s; text-align:center;}
-                                   nav ul li{display:block; margin:20px 0;  line-height:40px;}
+                                   nav ul li{display:block; margin:20px 0; line-height:30px;}
                                    nav ul li a{font-size:25px; font-family: 'Syne Mono', monospace; margin-top: 70px;}
                                    #check:checked ~ ul{left:0%;}
                                    #check:checked ~ label #btn{display:none;}
                                    #check:checked ~ label #cancel{display:block;}
            }
-</style>
-</Head>
-
-
-
-<body>
-    <Header>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-            <i class="fas fa-search" id="search" style="color:black"></i>
-            
-            </label>
-            <img src="assets/logo 2.png" alt="logo">
-            <ul>
-            <li><a href="#" >Home</a></li>
-           
-         
-            <li><a href="enroll.html">Enroll</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav> 
- </Header> 
+               
+               
+          
+          
+          
+         .main{  padding:0 10px; width:100%;}       
    
- 
+           .wrapper{
+  max-width: 500px;
+  border-radius: 10px;
+  width: 100%;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
 
-<center>
- <div class="formdiv" style="width:430px; background:grey; height:400px; margin-top:50px">
+.wrapper .title{
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family:Dubai Medium;
+}
+
+.wrapper .form{
+  width: 100%;
+  position:static;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: black;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #fec107;
+  color: black;
+  font-size:20px;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+  
+          
+  </style>
+
+
+
+
+ </head>
+ 
+ 
+ <body>
+     <Header>
+       <nav>
+           <input type="checkbox" id="check">
+           <label for="check">
+           <i class="fas fa-bars" id="btn"></i>
+           <i class="fas fa-times" id="cancel"></i>
+           <i class="fas fa-search" id="search" style="color:black"></i>
+           
+           </label>
+           <img src="assets/logo 2.png" alt="logo">
+           <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#" class="active">Enroll</a></li>
+
+           <li><a href="#">Contact</a></li>
+           </ul>
+       </nav> 
+</Header> 
+
+
+
+
+
+
+<div class="main">
+
+<div class="wrapper">
+    <div class="title">
+      Enroll For Course
+    </div>
+    <form action="https://formspree.io/f/meqdgbbn" method="POST">
+    <div class="form">
+       <div class="inputfield">
+          <label>Full Name</label>
+          <input type="text" name="name" class="input">
+       </div> 
+       
+       
+      
+
+
+
+        <div class="inputfield">
+          <label>Mobile</label>
+          <input type="text" name="mobile" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Email</label>
+          <input type="email" name="email" class="input">
+       </div>  
+      <div class="inputfield">
+          <label>City</label>
+          <input type="text" name="city" class="input">
+       </div> 
+
+       <div class="inputfield">
+        <label>Your Trading Capital</label>
+        <input type="text" class="input" name="capital">
+     </div> 
+
+        <div class="inputfield">
+          <label>Trading Level</label>
+          <div class="custom_select">
+            <select name="tradinglevel">
+              <option value="">Select</option>
+              <option value="beginner">Beginner</option>
+              <option value="meidum">Medium</option>
+              <option value="pro">Pro</option>
+            </select>
+          </div>
+       </div> 
+       
+
+
+       <div class="inputfield">
+        <label>Profession</label>
+        <div class="custom_select">
+          <select name="profession">
+            <option value="">Select</option>
+            <option value="employed">Employed</option>
+            <option value="student">Student</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+     </div> 
+
+
+
+
+
+    
+     
+     <div class="inputfield">
+        <input type="submit" value="Enroll" class="btn">
+      </div>
+    </div>
+</div>	
+</form>
 </div>
-</center>
-</body>
-</HTML>
+
+<div class="footer" style="width:100%;  background: linear-gradient(to right, #141e30, #243b55); height:130px;">
+  <footer>
+      <br>
+       <center><img src="assets/logo-red.png" width="160px"></center>
+      <br><br>
+      <center><h4 style="color:white">	&#169; sahiltrading.com</h4></center>
+  </footer>
+</div>
+<div style="width:100%; height:4px; background:orange;"></div>
+<div style="width:100%; height:4px; background:blue;"></div>
+<div style="width:100%; height:4px; background:green;"></div>
+ </body>
+ </html>
